@@ -35,27 +35,12 @@ public partial class Plugin : BaseUnityPlugin
         Log.LogInfo($"Plugin {Name} is loaded!");
         
         this.LoadBundleWithName(
-            "chrisps.peakbundle",
-            bundle =>
-            {
-                bundle.Mod.RegisterContent();
-            }
+            "chrisps", bundle => { bundle.Mod.RegisterContent(); }
         );
+        Log.LogInfo("Chrisps items are loaded!");
         this.LoadBundleWithName(
-            "extraextremeenergydrink.peakbundle",
-            bundle =>
-            {
-                bundle.Mod.RegisterContent();
-                
-                /* stuff for adding custom effects or something idk
-                bundle =>
-                {
-                    var extraextremeenergydrink = bundle.LoadAsset<UnityItemContent>("Extra Extreme Energy Drink");
-                    // Something like this for example:
-                    extraextremeenergydrink.Item.gameObject.AddComponent<FooBar>();
-                }
-                */
-            }
+            "extraextremeenergydrink", bundle => { bundle.Mod.RegisterContent(); }
         );
+        Log.LogInfo("Extra Extreme Energy Drink item is loaded!");
     }
 }

@@ -24,6 +24,10 @@ source = "../../artifacts/bin/Scouting4Food/release/com.github.BurningSulphur.Sc
 target = "plugins/"
 
 [[build.copy]]
+source = "../../src/Scouting4Food/bundles"
+target = "plugins/"
+
+[[build.copy]]
 source = "../../CHANGELOG.md"
 target = "/"
 
