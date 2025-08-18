@@ -1,5 +1,7 @@
 ﻿using BepInEx;
 using BepInEx.Logging;
+using PEAKLib.Core;
+using PEAKLib.Items.UnityEditor;
 
 namespace Scouting4Food;
 
@@ -31,5 +33,29 @@ public partial class Plugin : BaseUnityPlugin
 
         // Log our awake here so we can see it in LogOutput.log file
         Log.LogInfo($"Plugin {Name} is loaded!");
+        
+        this.LoadBundleWithName(
+            "chrisps.peakbundle",
+            bundle =>
+            {
+                bundle.Mod.RegisterContent();
+            }
+        );
+        this.LoadBundleWithName(
+            "extraextremeenergydrink.peakbundle",
+            bundle =>
+            {
+                bundle.Mod.RegisterContent();
+                
+                /* stuff for adding custom effects or something idk
+                bundle =>
+                {
+                    var extraextremeenergydrink = bundle.LoadAsset<UnityItemContent>("Extra Extreme Energy Drink");
+                    // Something like this for example:
+                    extraextremeenergydrink.Item.gameObject.AddComponent<FooBar>();
+                }
+                */
+            }
+        );
     }
 }
