@@ -42,5 +42,11 @@ public partial class Plugin : BaseUnityPlugin
             "extraextremeenergydrink", bundle => { bundle.Mod.RegisterContent(); }
         );
         Log.LogInfo("Extra Extreme Energy Drink item is loaded!");
+        
+        this.LoadBundleWithName(
+            "icecream", bundle => { bundle.Mod.RegisterContent(); }
+        );
+        Log.LogInfo("icecream item is loaded!");
+        
     }
 }
