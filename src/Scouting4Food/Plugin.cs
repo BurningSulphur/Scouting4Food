@@ -35,18 +35,35 @@ public partial class Plugin : BaseUnityPlugin
         Log.LogInfo($"Plugin {Name} is loaded!");
         
         this.LoadBundleWithName(
-            "chrisps", bundle => { bundle.Mod.RegisterContent(); }
+            "chrisps.peakbundle", bundle => { bundle.Mod.RegisterContent(); }
         );
         Log.LogInfo("Chrisps items are loaded!");
         this.LoadBundleWithName(
-            "extraextremeenergydrink", bundle => { bundle.Mod.RegisterContent(); }
+            "extraextremeenergydrink.peakbundle", bundle => { bundle.Mod.RegisterContent(); }
         );
         Log.LogInfo("Extra Extreme Energy Drink item is loaded!");
         
         this.LoadBundleWithName(
-            "icecream", bundle => { bundle.Mod.RegisterContent(); }
+            "icecream.peakbundle", bundle => { bundle.Mod.RegisterContent(); }
         );
         Log.LogInfo("icecream item is loaded!");
         
+        this.LoadBundleWithName(
+            "gob_stopper.peakbundle", bundle => { bundle.Mod.RegisterContent(); }
+        );
+        Log.LogInfo("gob_stopper item is loaded!");
+        this.LoadBundleWithName(
+            "melon.peakbundle", bundle => { bundle.Mod.RegisterContent(); }
+        );
+        Log.LogInfo("melon item is loaded!");
+        this.LoadBundleWithName(
+            "beans.peakbundle", bundle => { bundle.Mod.RegisterContent(); }
+        );
+        Log.LogInfo("beans item is loaded!");
+        Log.LogInfo("melon item is loaded!");
+        this.LoadBundleWithName(
+            "bandaid.peakbundle", bundle => { bundle.Mod.RegisterContent(); }
+        );
+        Log.LogInfo("bandaid item is loaded!");
     }
 }
