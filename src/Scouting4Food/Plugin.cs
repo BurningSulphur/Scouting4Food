@@ -1,4 +1,6 @@
-﻿using BepInEx;
+﻿using System.Collections.Generic;
+using System.Linq;
+using BepInEx;
 using BepInEx.Logging;
 using PEAKLib.Core;
 using PEAKLib.Items.UnityEditor;
@@ -32,7 +34,9 @@ public partial class Plugin : BaseUnityPlugin
         // See https://lethal.wiki/dev/fundamentals/patching-code
 
         // Log our awake here so we can see it in LogOutput.log file
-        Log.LogInfo($"Plugin {Name} is loaded!");
+        Log.LogInfo($"Plugin {Name} is loading");
+
+        LocalizationFix();
         
         this.LoadBundleWithName(
             "chrisps.peakbundle", bundle => { bundle.Mod.RegisterContent(); }
@@ -60,10 +64,30 @@ public partial class Plugin : BaseUnityPlugin
             "beans.peakbundle", bundle => { bundle.Mod.RegisterContent(); }
         );
         Log.LogInfo("beans item is loaded!");
-        Log.LogInfo("melon item is loaded!");
         this.LoadBundleWithName(
             "bandaid.peakbundle", bundle => { bundle.Mod.RegisterContent(); }
         );
         Log.LogInfo("bandaid item is loaded!");
+        this.LoadBundleWithName(
+            "climberschalk.peakbundle", bundle => { bundle.Mod.RegisterContent(); }
+        );
+        Log.LogInfo("climbers chalk item is loaded!");
+    }
+
+    private static void LocalizationFix()
+    {
+        LocalizedText.mainTable["NAME_SALTY CHRISPS"] = ["Salty Chrisps"];
+        LocalizedText.mainTable["NAME_FLAMING HOT CHRISPS"] = ["Flaming Hot Chrisps"];
+        LocalizedText.mainTable["NAME_EXTRA EXTREME ENERGY DRINK"] = ["Extra Extreme Energy Drink"];
+        LocalizedText.mainTable["NAME_ICECREAM"] = ["Ice Lolly"];
+        LocalizedText.mainTable["NAME_POPCICLE STICK"] = ["Popcicle Stick"];
+        LocalizedText.mainTable["NAME_GOB STOPPER"] = ["Gob Stopper"];
+        LocalizedText.mainTable["NAME_WATERMELON"] = ["Watermelon"];
+        LocalizedText.mainTable["NAME_WATERMELON SLICE"] = ["Watermelon Slice"];
+        LocalizedText.mainTable["NAME_CAN O' BEANS"] = ["Can O' Beans"];
+        LocalizedText.mainTable["NAME_STICKY PLASTER"] = ["Sticky Plaster"];
+        LocalizedText.mainTable["NAME_CLIMBER'S CHALK"] = ["Climber's Chalk"];
+        LocalizedText.mainTable["NAME_CLIMBER'S CHALK"] = ["Climber's Chalk"];
+        LocalizedText.mainTable["chalk up"] = ["chalk up"];
     }
 }
