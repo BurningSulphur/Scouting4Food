@@ -13,3 +13,4 @@
 
 ## Version 1.1
 - Expanded the mod description
+- Made bundles load better

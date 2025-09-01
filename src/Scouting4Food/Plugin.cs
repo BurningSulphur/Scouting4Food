@@ -38,56 +38,38 @@ public partial class Plugin : BaseUnityPlugin
 
         LocalizationFix();
         
-        this.LoadBundleWithName(
-            "chrisps.peakbundle", bundle => { bundle.Mod.RegisterContent(); }
-        );
+        this.LoadBundleAndContentsWithName("chrisps.peakbundle");
         Log.LogInfo("Chrisps items are loaded!");
-        this.LoadBundleWithName(
-            "extraextremeenergydrink.peakbundle", bundle => { bundle.Mod.RegisterContent(); }
-        );
+        this.LoadBundleAndContentsWithName("extraextremeenergydrink.peakbundle");
         Log.LogInfo("Extra Extreme Energy Drink item is loaded!");
-        
-        this.LoadBundleWithName(
-            "icecream.peakbundle", bundle => { bundle.Mod.RegisterContent(); }
-        );
-        Log.LogInfo("icecream item is loaded!");
-        
-        this.LoadBundleWithName(
-            "gob_stopper.peakbundle", bundle => { bundle.Mod.RegisterContent(); }
-        );
+        this.LoadBundleAndContentsWithName("icecream.peakbundle");
+        Log.LogInfo("Icecream item is loaded!");
+        this.LoadBundleAndContentsWithName("gob_stopper.peakbundle");
         Log.LogInfo("gob_stopper item is loaded!");
-        this.LoadBundleWithName(
-            "melon.peakbundle", bundle => { bundle.Mod.RegisterContent(); }
-        );
+        this.LoadBundleAndContentsWithName("melon.peakbundle");
         Log.LogInfo("melon item is loaded!");
-        this.LoadBundleWithName(
-            "beans.peakbundle", bundle => { bundle.Mod.RegisterContent(); }
-        );
+        this.LoadBundleAndContentsWithName("beans.peakbundle");
         Log.LogInfo("beans item is loaded!");
-        this.LoadBundleWithName(
-            "bandaid.peakbundle", bundle => { bundle.Mod.RegisterContent(); }
-        );
+        this.LoadBundleAndContentsWithName("bandaid.peakbundle");
         Log.LogInfo("bandaid item is loaded!");
-        this.LoadBundleWithName(
-            "climberschalk.peakbundle", bundle => { bundle.Mod.RegisterContent(); }
-        );
+        this.LoadBundleAndContentsWithName( "climberschalk.peakbundle");
         Log.LogInfo("climbers chalk item is loaded!");
     }
 
     private static void LocalizationFix()
-    {
-        LocalizedText.mainTable["NAME_SALTY CHRISPS"] = ["Salty Chrisps"];
-        LocalizedText.mainTable["NAME_FLAMING HOT CHRISPS"] = ["Flaming Hot Chrisps"];
-        LocalizedText.mainTable["NAME_EXTRA EXTREME ENERGY DRINK"] = ["Extra Extreme Energy Drink"];
-        LocalizedText.mainTable["NAME_ICECREAM"] = ["Ice Lolly"];
-        LocalizedText.mainTable["NAME_POPCICLE STICK"] = ["Popcicle Stick"];
-        LocalizedText.mainTable["NAME_GOB STOPPER"] = ["Gob Stopper"];
-        LocalizedText.mainTable["NAME_WATERMELON"] = ["Watermelon"];
-        LocalizedText.mainTable["NAME_WATERMELON SLICE"] = ["Watermelon Slice"];
-        LocalizedText.mainTable["NAME_CAN O' BEANS"] = ["Can O' Beans"];
-        LocalizedText.mainTable["NAME_STICKY PLASTER"] = ["Sticky Plaster"];
-        LocalizedText.mainTable["NAME_CLIMBER'S CHALK"] = ["Climber's Chalk"];
-        LocalizedText.mainTable["NAME_CLIMBER'S CHALK"] = ["Climber's Chalk"];
-        LocalizedText.mainTable["chalk up"] = ["chalk up"];
+    {//                                                                English                          Français                      Italiano                      Deutsch                       Español  (España)             Español (LatAm)               Português (BR)                Русский                       Українська                    简体中文                       繁體中文                        日本語                         한국어                              Polski                        Türkçe
+        LocalizedText.mainTable["NAME_SALTY CHRISPS"] =               ["Salty Chrisps"                 ,"Salty Chrisps"              ,"Salty Chrisps"              ,"Salty Chrisps"              ,"Salty Chrisps"              ,"Salty Chrisps"              ,"Salty Chrisps"              ,"Salty Chrisps"              ,"Salty Chrisps"              ,"Salty Chrisps"              ,"Salty Chrisps"              ,"Salty Chrisps"              ,"Salty Chrisps"                  ,"Salty Chrisps"               ,"Salty Chrisps"                       ];
+        LocalizedText.mainTable["NAME_FLAMING HOT CHRISPS"] =         ["Flaming Hot Chrisps"           ,"Flaming Hot Chrisps"        ,"Flaming Hot Chrisps"        ,"Flaming Hot Chrisps"        ,"Flaming Hot Chrisps"        ,"Flaming Hot Chrisps"        ,"Flaming Hot Chrisps"        ,"Flaming Hot Chrisps"        ,"Flaming Hot Chrisps"        ,"Flaming Hot Chrisps"        ,"Flaming Hot Chrisps"        ,"Flaming Hot Chrisps"        ,"Flaming Hot Chrisps"            ,"Flaming Hot Chrisps"         ,"Flaming Hot Chrisps"                ];
+        LocalizedText.mainTable["NAME_EXTRA EXTREME ENERGY DRINK"] =  ["Extra Extreme Energy Drink"    ,"Extra Extreme Energy Drink" ,"Extra Extreme Energy Drink" ,"Extra Extreme Energy Drink" ,"Extra Extreme Energy Drink" ,"Extra Extreme Energy Drink" ,"Extra Extreme Energy Drink" ,"Extra Extreme Energy Drink" ,"Extra Extreme Energy Drink" ,"Extra Extreme Energy Drink" ,"Extra Extreme Energy Drink" ,"Extra Extreme Energy Drink" ,"Extra Extreme Energy Drink"     ,"Extra Extreme Energy Drink"  ,"Extra Extreme Energy Drink"         ];
+        LocalizedText.mainTable["NAME_ICECREAM"] =                    ["Ice Lolly"                     ,"Ice Lolly"                  ,"Ice Lolly"                  ,"Ice Lolly"                  ,"Ice Lolly"                  ,"Ice Lolly"                  ,"Ice Lolly"                  ,"Ice Lolly"                  ,"Ice Lolly"                  ,"Ice Lolly"                  ,"Ice Lolly"                  ,"Ice Lolly"                  ,"Ice Lolly"                      ,"Ice Lolly"                   ,"Ice Lolly"                          ];
+        LocalizedText.mainTable["NAME_POPCICLE STICK"] =              ["Popcicle Stick"                ,"Popcicle Stick"             ,"Popcicle Stick"             ,"Popcicle Stick"             ,"Popcicle Stick"             ,"Popcicle Stick"             ,"Popcicle Stick"             ,"Popcicle Stick"             ,"Popcicle Stick"             ,"Popcicle Stick"             ,"Popcicle Stick"             ,"Popcicle Stick"             ,"Popcicle Stick"                 ,"Popcicle Stick"              ,"Popcicle Stick"                     ];
+        LocalizedText.mainTable["NAME_GOB STOPPER"] =                 ["Gob Stopper"                   ,"Gob Stopper"                ,"Gob Stopper"                ,"Gob Stopper"                ,"Gob Stopper"                ,"Gob Stopper"                ,"Gob Stopper"                ,"Gob Stopper"                ,"Gob Stopper"                ,"Gob Stopper"                ,"Gob Stopper"                ,"Gob Stopper"                ,"Gob Stopper"                    ,"Gob Stopper"                 ,"Gob Stopper"                        ];
+        LocalizedText.mainTable["NAME_WATERMELON"] =                  ["Watermelon"                    ,"Watermelon"                 ,"Watermelon"                 ,"Watermelon"                 ,"Watermelon"                 ,"Watermelon"                 ,"Watermelon"                 ,"Watermelon"                 ,"Watermelon"                 ,"Watermelon"                 ,"Watermelon"                 ,"Watermelon"                 ,"Watermelon"                     ,"Watermelon"                  ,"Watermelon"                         ];
+        LocalizedText.mainTable["NAME_WATERMELON SLICE"] =            ["Watermelon Slice"              ,"Watermelon Slice"           ,"Watermelon Slice"           ,"Watermelon Slice"           ,"Watermelon Slice"           ,"Watermelon Slice"           ,"Watermelon Slice"           ,"Watermelon Slice"           ,"Watermelon Slice"           ,"Watermelon Slice"           ,"Watermelon Slice"           ,"Watermelon Slice"           ,"Watermelon Slice"               ,"Watermelon Slice"            ,"Watermelon Slice"                   ];
+        LocalizedText.mainTable["NAME_CAN O' BEANS"] =                ["Can O' Beans"                  ,"Can O' Beans"               ,"Can O' Beans"               ,"Can O' Beans"               ,"Can O' Beans"               ,"Can O' Beans"               ,"Can O' Beans"               ,"Can O' Beans"               ,"Can O' Beans"               ,"Can O' Beans"               ,"Can O' Beans"               ,"Can O' Beans"               ,"Can O' Beans"                   ,"Can O' Beans"                ,"Can O' Beans"                       ];
+        LocalizedText.mainTable["NAME_STICKY PLASTER"] =              ["Sticky Plaster"                ,"Sticky Plaster"             ,"Sticky Plaster"             ,"Sticky Plaster"             ,"Sticky Plaster"             ,"Sticky Plaster"             ,"Sticky Plaster"             ,"Sticky Plaster"             ,"Sticky Plaster"             ,"Sticky Plaster"             ,"Sticky Plaster"             ,"Sticky Plaster"             ,"Sticky Plaster"                 ,"Sticky Plaster"              ,"Sticky Plaster"                     ];
+        LocalizedText.mainTable["NAME_CLIMBER'S CHALK"] =             ["Climber's Chalk"               ,"Climber's Chalk"            ,"Climber's Chalk"            ,"Climber's Chalk"            ,"Climber's Chalk"            ,"Climber's Chalk"            ,"Climber's Chalk"            ,"Climber's Chalk"            ,"Climber's Chalk"            ,"Climber's Chalk"            ,"Climber's Chalk"            ,"Climber's Chalk"            ,"Climber's Chalk"                ,"Climber's Chalk"             ,"Climber's Chalk"                    ];
+        LocalizedText.mainTable["NAME_CLIMBER'S CHALK"] =             ["Climber's Chalk"               ,"Climber's Chalk"            ,"Climber's Chalk"            ,"Climber's Chalk"            ,"Climber's Chalk"            ,"Climber's Chalk"            ,"Climber's Chalk"            ,"Climber's Chalk"            ,"Climber's Chalk"            ,"Climber's Chalk"            ,"Climber's Chalk"            ,"Climber's Chalk"            ,"Climber's Chalk"                ,"Climber's Chalk"             ,"Climber's Chalk"                    ];
+        LocalizedText.mainTable["chalk up"] =                         ["chalk up"                      ,"chalk up"                   ,"chalk up"                   ,"chalk up"                   ,"chalk up"                   ,"chalk up"                   ,"chalk up"                   ,"chalk up"                   ,"chalk up"                   ,"chalk up"                   ,"chalk up"                   ,"chalk up"                   ,"chalk up"                       ,"chalk up"                    ,"chalk up"                           ]; 
     }
 }
