@@ -10,3 +10,6 @@
 - Gob Stopper
 - Icecream
 - Melon
+
+## Version 1.1
+- Expanded the mod description
