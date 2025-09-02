@@ -37,7 +37,7 @@ public partial class Plugin : BaseUnityPlugin
         Log.LogInfo($"Plugin {Name} is loading");
 
         LocalizationFix();
-        
+
         this.LoadBundleAndContentsWithName("chrisps.peakbundle");
         Log.LogInfo("Chrisps items are loaded!");
         this.LoadBundleAndContentsWithName("extraextremeenergydrink.peakbundle");
@@ -52,12 +52,16 @@ public partial class Plugin : BaseUnityPlugin
         Log.LogInfo("beans item is loaded!");
         this.LoadBundleAndContentsWithName("bandaid.peakbundle");
         Log.LogInfo("bandaid item is loaded!");
-        this.LoadBundleAndContentsWithName( "climberschalk.peakbundle");
+        this.LoadBundleAndContentsWithName("climberschalk.peakbundle");
         Log.LogInfo("climbers chalk item is loaded!");
+        this.LoadBundleAndContentsWithName("chickenleg.peakbundle");
+        Log.LogInfo("chicken leg item is loaded!");
+
     }
 
     private static void LocalizationFix()
     {//                                                                English                          Français                      Italiano                      Deutsch                       Español  (España)             Español (LatAm)               Português (BR)                Русский                       Українська                    简体中文                       繁體中文                        日本語                         한국어                              Polski                                 Türkçe
+        LocalizedText.mainTable["NAME_HUGE CHICKEN LEG"] =            ["Huge Chicken Thigh"              ,"Huge Chicken Leg"           ,"Huge Chicken Leg"           ,"Huge Chicken Leg"           ,"Huge Chicken Leg"           ,"Huge Chicken Leg"           ,"Huge Chicken Leg"           ,"Huge Chicken Leg"           ,"Huge Chicken Leg"           ,"Huge Chicken Leg"           ,"Huge Chicken Leg"           ,"Huge Chicken Leg"           ,"Huge Chicken Leg"               ,"OGROMNE UDKO Z KURCZAKA"                 ,"Huge Chicken Leg"                   ];
         LocalizedText.mainTable["NAME_SALTY CHRISPS"] =               ["Salty Chrisps"                 ,"Salty Chrisps"              ,"Salty Chrisps"              ,"Salty Chrisps"              ,"Salty Chrisps"              ,"Salty Chrisps"              ,"Salty Chrisps"              ,"Salty Chrisps"              ,"Salty Chrisps"              ,"Salty Chrisps"              ,"Salty Chrisps"              ,"Salty Chrisps"              ,"Salty Chrisps"                  ,"Słone Czipsy"                          ,"Salty Chrisps"                      ];
         LocalizedText.mainTable["NAME_FLAMING HOT CHRISPS"] =         ["Flaming Hot Chrisps"           ,"Flaming Hot Chrisps"        ,"Flaming Hot Chrisps"        ,"Flaming Hot Chrisps"        ,"Flaming Hot Chrisps"        ,"Flaming Hot Chrisps"        ,"Flaming Hot Chrisps"        ,"Flaming Hot Chrisps"        ,"Flaming Hot Chrisps"        ,"Flaming Hot Chrisps"        ,"Flaming Hot Chrisps"        ,"Flaming Hot Chrisps"        ,"Flaming Hot Chrisps"            ,"Ogniste Czipsy"                        ,"Flaming Hot Chrisps"                ];
         LocalizedText.mainTable["NAME_EXTRA EXTREME ENERGY DRINK"] =  ["Extra Extreme Energy Drink"    ,"Extra Extreme Energy Drink" ,"Extra Extreme Energy Drink" ,"Extra Extreme Energy Drink" ,"Extra Extreme Energy Drink" ,"Extra Extreme Energy Drink" ,"Extra Extreme Energy Drink" ,"Extra Extreme Energy Drink" ,"Extra Extreme Energy Drink" ,"Extra Extreme Energy Drink" ,"Extra Extreme Energy Drink" ,"Extra Extreme Energy Drink" ,"Extra Extreme Energy Drink"     ,"Ekstremalny napój energetyczny"        ,"Extra Extreme Energy Drink"         ];
