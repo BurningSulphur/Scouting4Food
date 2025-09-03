@@ -14,3 +14,9 @@
 ## Version 1.1
 - Expanded the mod description
 - Made bundles load better
+- 
+## Version 1.2
+- Fixed dependencies list
+
+## Version 1.3
+- Added Chicken leg to the caldera
