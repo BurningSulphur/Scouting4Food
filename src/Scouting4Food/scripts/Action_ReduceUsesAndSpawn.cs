@@ -30,7 +30,7 @@ public class Action_ReduceUsesAndSpawn : ItemAction
                 base.character.StartCoroutine(SpawnItemDelayed());
             }
         }
-    }
+    } 
     
     public IEnumerator SpawnItemDelayed()
     {

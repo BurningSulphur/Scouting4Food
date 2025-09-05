@@ -19,7 +19,7 @@
   <ItemGroup>
     <PackageReference Include="PEAKModding.PEAKLib.Items" Version="1.5.3" />
   </ItemGroup>
-
+  
 
   <!--
   How to include thunderstore mods as dependencies via nuget
