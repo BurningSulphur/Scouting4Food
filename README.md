@@ -45,6 +45,13 @@ Adds more food items and utility items that fit well within the peak style
 - When finished you get a lot of extra stamina
 - Can bonk people with it
 
+
+### Chicken Drumstick
+<img src="https://github.com/BurningSulphur/Scouting4Food/blob/master/thunderstore_images/Chicken_Drumstick.png?raw=true" width="200" height="200" />
+
+- Just a good food
+- Kinda rare but spawns more often in the Caldera
+
 ## Added equipment items:
 
 ### Climber's Chalk

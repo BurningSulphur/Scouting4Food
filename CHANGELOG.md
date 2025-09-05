@@ -21,3 +21,7 @@
 ## Version 1.3
 - Added Chicken leg to the caldera
 - Rebalanced items
+
+## Version 2.0
+- Updated readme
+- from now on updates adding items will be a major update, other changes will be minor
