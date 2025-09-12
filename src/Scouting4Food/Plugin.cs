@@ -4,6 +4,7 @@ using BepInEx;
 using BepInEx.Logging;
 using PEAKLib.Core;
 using PEAKLib.Items.UnityEditor;
+using UnityEngine;
 
 namespace Scouting4Food;
 
@@ -55,7 +56,25 @@ public partial class Plugin : BaseUnityPlugin
         this.LoadBundleAndContentsWithName("climberschalk.peakbundle");
         Log.LogInfo("climbers chalk item is loaded!");
         this.LoadBundleAndContentsWithName("chickenleg.peakbundle");
-        Log.LogInfo("chicken leg item is loaded!");
+        Log.LogInfo("chicken leg item is loaded!"); 
+        this.LoadBundleAndContentsWithName("antigravshroom.peakbundle");
+        Log.LogInfo("Antigravshroom item is loaded!");
+        this.LoadBundleAndContentsWithName(
+            "iceaxe.peakbundle",
+            peakBundle =>
+            {
+                NetworkPrefabManager.RegisterNetworkPrefab(
+                    peakBundle.Mod,
+                    "0_Items/",
+                    peakBundle.LoadAsset<GameObject>("0_IceAxeHammered")
+                );
+            }
+        );// this make the ice axe hammered a networked prefab
+        Log.LogInfo("IceAxe item is loaded!");
+
+        //ShroomAddition();
+        
+        
 
     }
 
@@ -76,4 +95,10 @@ public partial class Plugin : BaseUnityPlugin
         LocalizedText.mainTable["NAME_CLIMBER'S CHALK"] =             ["CLIMBER'S CHALK"               ,"CLIMBER'S CHALK"            ,"CLIMBER'S CHALK"            ,"CLIMBER'S CHALK"            ,"MAGNESIO DE ESCALADA"                 ,"MAGNESIO EN POLVO"                ,"CLIMBER'S CHALK"            ,"CLIMBER'S CHALK"            ,"CLIMBER'S CHALK"            ,"CLIMBER'S CHALK"            ,"CLIMBER'S CHALK"            ,"CLIMBER'S CHALK"            ,"CLIMBER'S CHALK"                ,"MAGNEZJA WSPINACZKOWA"                 ,"CLIMBER'S CHALK"                    ];
         LocalizedText.mainTable["CHALKUP"] =                          ["CHALK UP"                      ,"CHALK UP"                   ,"CHALK UP"                   ,"CHALK UP"                   , "ECHARSE MAGNESIO"                    ,"PONERSE MAGNESIO"                 ,"CHALK UP"                   ,"CHALK UP"                   ,"CHALK UP"                   ,"CHALK UP"                   ,"CHALK UP"                   ,"CHALK UP"                   ,"CHALK UP"                       ,"POSYP"                                 ,"CHALK UP"                           ];
     }
+
+   // private static void ShroomAddition()
+   // {
+        //   LootData.AllSpawnWeightData[SpawnPool.MushroomCluster].Add(yourMushroomItemID, weight);
+    //    LootData.AllSpawnWeightData[SpawnPool.MushroomCluster].Add(222, 50);
+    //}
 }

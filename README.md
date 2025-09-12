@@ -15,7 +15,7 @@ Adds more food items and utility items that fit well within the peak style
 <img src="https://github.com/BurningSulphur/Scouting4Food/blob/master/thunderstore_images/Item_IceCream.png?raw=true" width="200" height="200" /> <img src="https://github.com/BurningSulphur/Scouting4Food/blob/master/thunderstore_images/icecream_stick.png?raw=true" width="200" height="200" />
 
 - Has 6 uses
-- When finished you will drop a popsicle. Will you be a litter bug?
+- When finished you will drop a popsicle stick. Will you be a litter bug?
 
 ### Melon and Melon Slices
 <img src="https://github.com/BurningSulphur/Scouting4Food/blob/master/thunderstore_images/Melon.png?raw=true" width="200" height="200" /> <img src="https://github.com/BurningSulphur/Scouting4Food/blob/master/thunderstore_images/Melon_Slice.png?raw=true" width="200" height="200" />
