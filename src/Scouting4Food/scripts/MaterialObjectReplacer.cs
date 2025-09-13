@@ -1,4 +1,4 @@
-﻿namespace Scouting4Food.scripts;
+﻿﻿namespace Scouting4Food.scripts;
 
 
 using UnityEngine;
@@ -17,6 +17,12 @@ public class MaterialObjectReplacer : MonoBehaviour
     
     [Tooltip("The Material that gets special treatment")]
     public Material SpecialMaterial;
+    
+    [Tooltip("Name of the shader to apply to special materials")]
+    public string specialShaderName2 = "SmokeParticleSimple";
+    
+    [Tooltip("The Material that gets special treatment")]
+    public Material SpecialMaterial2;
 
     private void Start()
     {
@@ -44,6 +50,13 @@ public class MaterialObjectReplacer : MonoBehaviour
             Debug.LogError($"MaterialObjectReplacer: Shader '{specialShaderName}' not found!");
             return;
         }
+        
+        Shader newSpecialShader2 = Shader.Find(specialShaderName2);
+        if (SpecialMaterial2 != null && newSpecialShader2 == null)
+        {
+            Debug.LogError($"MaterialObjectReplacer: Shader '{specialShaderName2}' not found!");
+            return;
+        }
 
         Renderer[] renderers = targetObject.GetComponentsInChildren<Renderer>(true);
 
@@ -62,6 +75,11 @@ public class MaterialObjectReplacer : MonoBehaviour
                     {
                         updatedMat.shader = newSpecialShader;
                         Debug.Log($"Applied SPECIAL shader '{specialShaderName}' to material '{originalMat.name}'");
+                    }
+                    else if (SpecialMaterial2 != null && originalMat.name.Replace(" (Instance)", "") == SpecialMaterial2.name)
+                    {
+                        updatedMat.shader = newSpecialShader2;
+                        Debug.Log($"Applied SPECIAL shader '{specialShaderName2}' to material '{originalMat.name}'");
                     }
                     else
                     {
