@@ -1,6 +1,8 @@
 # Changelog
 
-
+## Version 3
+- Added the Ice axe
+- the anti grav shroom is unobtainable. the mushroom generation is hard coded.
 
 ## Version 2.1
 - Fixed text not being all caps
