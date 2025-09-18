@@ -54,6 +54,14 @@ Adds more food items and utility items that fit well within the peak style
 
 ## Added equipment items:
 
+### Ice Axe
+<img src="https://github.com/BurningSulphur/Scouting4Food/blob/master/thunderstore_images/Ice%20Axe.png?raw=true" width="200" height="200" />
+
+- A throwable piton
+- Embeds itself into the wall it collides with
+- It's not firmly mounted though, so it will break after 6 seconds. 
+- It's a good idea to place a rope down afterwards.
+
 ### Climber's Chalk
 <img src="https://github.com/BurningSulphur/Scouting4Food/blob/master/thunderstore_images/Climber'sChalk.png?raw=true" width="200" height="200" />
 
